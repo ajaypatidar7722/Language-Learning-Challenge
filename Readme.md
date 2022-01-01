@@ -24,7 +24,9 @@ npm install
 
 ## Usage
 
-To start the application run the below command, and open the `Expo` application on your mobile then scan the QR Code which will generate by running the below command.
+1. Create a `.env` file in root directory, and move variables from `.env.example` into the same.
+
+2. To start the application run the below command, and open the `Expo` application on your mobile then scan the QR Code which will generate by running the below command.
 
 ```bash
 npm start
