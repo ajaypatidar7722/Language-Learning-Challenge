@@ -1,4 +1,4 @@
-export enum buttonTypes {
+export enum BUTTON_TYPES {
   SUCCESS = 'SUCCESS',
   ERROR = 'ERROR',
   DISABLE = 'DISABLE',

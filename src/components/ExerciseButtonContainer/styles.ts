@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../constants/colors';
+import { COLORS } from '../../constants/colors';
 
 export const styles = StyleSheet.create({
   root: {
@@ -10,10 +10,10 @@ export const styles = StyleSheet.create({
     padding: 25,
   },
   success: {
-    backgroundColor: colors.turquoise,
+    backgroundColor: COLORS.turquoise,
   },
   wrong: {
-    backgroundColor: colors.cinnabar,
+    backgroundColor: COLORS.cinnabar,
   },
   notSelect: {
     backgroundColor: 'transparent',
@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   statusText: {
-    color: colors.white,
+    color: COLORS.white,
     fontSize: 16,
     fontWeight: 'bold',
   },

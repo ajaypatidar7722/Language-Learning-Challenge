@@ -2,12 +2,12 @@ import React from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
-import { colors } from '../../constants/colors';
+import { COLORS } from '../../constants/colors';
 import Button from '../Button';
 import ExerciseButtonContainer from '../ExerciseButtonContainer';
 import ProgressBar from '../ProgressBar';
 import { styles } from './styles';
-import { answerTypes } from '../../constants/answerTypes';
+import { ANSWER_TYPES } from '../../constants/answerTypes';
 
 type ExerciseContainerProps = {
   children: any;
@@ -35,7 +35,7 @@ const ExerciseContainer = ({
   onGoBack,
 }: ExerciseContainerProps) => {
   const isAnswerRightOrWrong =
-    answerTypes.RIGHT === answerType || answerTypes.WRONG === answerType;
+    ANSWER_TYPES.RIGHT === answerType || ANSWER_TYPES.WRONG === answerType;
 
   return (
     <>
@@ -44,7 +44,7 @@ const ExerciseContainer = ({
           disabled={activeIndex === 0 || isAnswerRightOrWrong}
           onPress={() => onGoBack(activeIndex - 1)}
         >
-          <AntDesign name="left" size={24} color={colors.white} />
+          <AntDesign name="left" size={24} color={COLORS.white} />
         </TouchableOpacity>
         <ProgressBar progressValue={progressValue} />
       </View>

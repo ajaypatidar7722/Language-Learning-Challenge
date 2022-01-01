@@ -1,11 +1,11 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../constants/colors';
+import { COLORS } from '../../constants/colors';
 
 export const styles = StyleSheet.create({
   questionText: {
     fontSize: 20,
     fontWeight: '500',
-    color: colors.white,
+    color: COLORS.white,
     marginHorizontal: 3,
   },
   guessingText: { textDecorationLine: 'underline', fontWeight: '700' },

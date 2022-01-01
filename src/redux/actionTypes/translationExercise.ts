@@ -4,8 +4,8 @@ export enum ActionTypes {
 }
 
 export interface TranslationQuestion {
-  englishQue: string;
-  deQue: string;
+  sourceQuestion: string;
+  targetQuestion: string;
   options: string[];
   ans: string;
   isGivenAnsCorrect: boolean;

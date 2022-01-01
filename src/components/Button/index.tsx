@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 
-import { buttonTypes } from '../../constants/buttonTypes';
+import { BUTTON_TYPES } from '../../constants/buttonTypes';
 import { styles } from './styles';
 
 type ButtonProps = {
@@ -12,8 +12,8 @@ type ButtonProps = {
 };
 
 const Button = ({ title, onPress, disabled, buttonType }: ButtonProps) => {
-  const isError = buttonType === buttonTypes.ERROR;
-  const isSuccess = buttonType === buttonTypes.SUCCESS;
+  const isError = buttonType === BUTTON_TYPES.ERROR;
+  const isSuccess = buttonType === BUTTON_TYPES.SUCCESS;
 
   return (
     <TouchableOpacity

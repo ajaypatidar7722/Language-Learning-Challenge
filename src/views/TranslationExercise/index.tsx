@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Alert, Text, View } from 'react-native';
-import { collection, onSnapshot } from 'firebase/firestore';
+import { addDoc, collection, onSnapshot } from 'firebase/firestore';
 import { useDispatch } from 'react-redux';
 
 import ExerciseContainer from '../../components/ExerciseContainer';
 import ExerciseOption from '../../components/ExerciseOption';
 import SourceLanguageQuestion from '../../components/SourceLanguageQuestion';
 import TargetLanguageQuestion from '../../components/TargetLanguageQuestion';
-import { answerTypes } from '../../constants/answerTypes';
-import { buttonTypes } from '../../constants/buttonTypes';
+import { ANSWER_TYPES } from '../../constants/answerTypes';
+import { BUTTON_TYPES } from '../../constants/buttonTypes';
 import { db } from '../../services/firebase/config';
 import { useTypedSelector } from '../../redux/hooks/useTypedSelector';
 import { setTranslationQuestions } from '../../redux/action/translationExercixe';
@@ -23,7 +23,8 @@ const buttonTitles = {
 
 const TranslationExercise = () => {
   const [selectedOption, setOption] = useState<string>('');
-  const [selectedOptionIsValid, setSelectedOptionIsValid] = useState<boolean>(false);
+  const [selectedOptionIsValid, setSelectedOptionIsValid] =
+    useState<boolean>(false);
   const [buttonTitle, setButtonTitle] = useState<string>(buttonTitles.continue);
   const [answerDescription, setAnswerDescription] = useState<string>('');
   const [activeIndex, setActiveIndex] = useState<number>(0);
@@ -35,17 +36,19 @@ const TranslationExercise = () => {
   );
 
   const currentQuestion = translationQuestions?.[activeIndex] || {};
-  const splittedSourceLangQue = currentQuestion?.englishQue?.split(' ') || [];
-  const splittedTargetLangQue = currentQuestion?.deQue?.split(' ') || [];
+  const splittedSourceLangQue =
+    currentQuestion?.sourceQuestion?.split(' ') || [];
+  const splittedTargetLangQue =
+    currentQuestion?.targetQuestion?.split(' ') || [];
   const answerType = answerDescription
     ? selectedOptionIsValid
-      ? answerTypes.RIGHT
-      : answerTypes.WRONG
+      ? ANSWER_TYPES.RIGHT
+      : ANSWER_TYPES.WRONG
     : '';
   const buttonType = answerDescription
     ? selectedOptionIsValid
-      ? buttonTypes.SUCCESS
-      : buttonTypes.ERROR
+      ? BUTTON_TYPES.SUCCESS
+      : BUTTON_TYPES.ERROR
     : '';
 
   const progressValue = ((activeIndex + 1) / translationQuestions.length) * 100;

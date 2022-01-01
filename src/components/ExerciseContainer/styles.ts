@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../constants/colors';
+import { COLORS } from '../../constants/colors';
 
 export const styles = StyleSheet.create({
   root: {
@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     bottom: 0,
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20,
-    backgroundColor: colors.shuttleGray,
+    backgroundColor: COLORS.shuttleGray,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',

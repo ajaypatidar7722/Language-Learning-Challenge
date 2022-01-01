@@ -1,12 +1,12 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../constants/colors';
+import { COLORS } from '../../constants/colors';
 
 export const styles = StyleSheet.create({
   root: { marginTop: 20, display: 'flex', alignItems: 'center' },
   headingText: {
     fontSize: 16,
     fontWeight: '400',
-    color: colors.white,
+    color: COLORS.white,
     marginBottom: 20,
   },
 

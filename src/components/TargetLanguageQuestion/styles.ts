@@ -1,30 +1,30 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../constants/colors';
+import { COLORS } from '../../constants/colors';
 
 export const styles = StyleSheet.create({
   questionText: {
     fontSize: 18,
-    color: colors.white,
+    color: COLORS.white,
     fontWeight: '700',
     marginHorizontal: 3,
   },
   filledOptionContainer: {
     padding: 10,
-    backgroundColor: colors.white,
+    backgroundColor: COLORS.white,
     borderRadius: 10,
   },
   rightOptionContainer: {
-    backgroundColor: colors.turquoise,
+    backgroundColor: COLORS.turquoise,
   },
   wrongOptionContainer: {
-    backgroundColor: colors.cinnabar,
+    backgroundColor: COLORS.cinnabar,
   },
   filledOptionText: {
-    color: colors.shuttleGray,
+    color: COLORS.shuttleGray,
     fontWeight: '700',
     fontSize: 18,
   },
   secondaryFilledOptionText: {
-    color: colors.white,
+    color: COLORS.white,
   },
 });

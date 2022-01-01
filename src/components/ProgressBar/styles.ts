@@ -1,17 +1,17 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../constants/colors';
+import { COLORS } from '../../constants/colors';
 
 export const styles = StyleSheet.create({
   root: {
-    borderColor: colors.shuttleGray,
+    borderColor: COLORS.shuttleGray,
     borderWidth: 4,
     borderRadius: 25,
     width: '65%',
     height: 15,
-    backgroundColor: colors.shuttleGray,
+    backgroundColor: COLORS.shuttleGray,
   },
   progress: {
-    backgroundColor: colors.turquoise,
+    backgroundColor: COLORS.turquoise,
     height: 7,
     borderRadius: 25,
   },

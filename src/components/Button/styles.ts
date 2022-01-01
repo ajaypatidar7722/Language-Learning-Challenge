@@ -1,34 +1,34 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../constants/colors';
+import { COLORS } from '../../constants/colors';
 
 export const styles = StyleSheet.create({
   root: {
     width: '100%',
     borderRadius: 25,
-    backgroundColor: colors.turquoise,
+    backgroundColor: COLORS.turquoise,
     padding: 12,
     marginVertical: 15,
   },
   disableButton: {
-    backgroundColor: colors.pickledBluewood,
+    backgroundColor: COLORS.pickledBluewood,
   },
   successButton: {
-    backgroundColor: colors.white,
+    backgroundColor: COLORS.white,
   },
   errorButton: {
-    backgroundColor: colors.white,
+    backgroundColor: COLORS.white,
   },
   title: {
     textAlign: 'center',
     fontSize: 16,
     fontWeight: 'bold',
-    color: colors.white,
+    color: COLORS.white,
     textTransform: 'uppercase',
   },
   successTitle: {
-    color: colors.turquoise,
+    color: COLORS.turquoise,
   },
   errorTitle: {
-    color: colors.cinnabar,
+    color: COLORS.cinnabar,
   },
 });

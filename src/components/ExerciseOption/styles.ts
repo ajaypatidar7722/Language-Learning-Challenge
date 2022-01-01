@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../constants/colors';
+import { COLORS } from '../../constants/colors';
 
 export const styles = StyleSheet.create({
   optionContainer: {
@@ -8,21 +8,21 @@ export const styles = StyleSheet.create({
     flexBasis: '45%',
     padding: 10,
     margin: 5,
-    backgroundColor: colors.white,
+    backgroundColor: COLORS.white,
   },
   disabledOptionContainer: {
-    backgroundColor: colors.regentGray,
+    backgroundColor: COLORS.regentGray,
   },
   optionText: {
-    color: colors.shuttleGray,
+    color: COLORS.shuttleGray,
     fontSize: 18,
     fontWeight: '700',
     textAlign: 'center',
   },
   selectedOption: {
-    backgroundColor: colors.pickledBluewood,
+    backgroundColor: COLORS.pickledBluewood,
   },
   selectedOptionText: {
-    color: colors.pickledBluewood,
+    color: COLORS.pickledBluewood,
   },
 });

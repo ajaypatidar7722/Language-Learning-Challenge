@@ -3,8 +3,8 @@ import { Text, View } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
 import { styles } from './styles';
-import { answerTypes } from '../../constants/answerTypes';
-import { colors } from '../../constants/colors';
+import { ANSWER_TYPES } from '../../constants/answerTypes';
+import { COLORS } from '../../constants/colors';
 
 type ExerciseButtonContainerProps = {
   children: any;
@@ -17,8 +17,8 @@ const ExerciseButtonContainer = ({
   answerType,
   description,
 }: ExerciseButtonContainerProps) => {
-  const isWrongAnswer = answerType === answerTypes.WRONG;
-  const isRightAnswer = answerType === answerTypes.RIGHT;
+  const isWrongAnswer = answerType === ANSWER_TYPES.WRONG;
+  const isRightAnswer = answerType === ANSWER_TYPES.RIGHT;
   const isOptionSelected = !isWrongAnswer && !isRightAnswer;
 
   return (
@@ -33,7 +33,7 @@ const ExerciseButtonContainer = ({
       {!isOptionSelected && (
         <View style={styles.statusContainer}>
           <Text style={styles.statusText}>{description}</Text>
-          <FontAwesome name="flag" size={24} color={colors.white} />
+          <FontAwesome name="flag" size={24} color={COLORS.white} />
         </View>
       )}
       {children}

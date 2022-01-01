@@ -11,8 +11,8 @@ interface State {
 const initialState = {
   translationQuestions: [
     {
-      englishQue: '',
-      deQue: '',
+      sourceQuestion: '',
+      targetQuestion: '',
       options: [],
       ans: '',
       isGivenAnsCorrect: false,
